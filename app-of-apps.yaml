@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps
+spec:
+  project: my-project
+  source:
+    repoURL: https://github.com/your-username/your-repo.git
+    targetRevision: master
+    path: apps
+    helm:
+      valueFiles:
+        - 'child-app-*.yaml'
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: abcd
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true

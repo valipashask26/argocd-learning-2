@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: child-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: child-app
+  template:
+    metadata:
+      labels:
+        app: child-app
+    spec:
+      containers:
+        - name: child-app-container
+          image: nginx:latest
+          ports:
+            - containerPort: 80
