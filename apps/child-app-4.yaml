@@ -5,7 +5,7 @@ metadata:
 spec:
   project: my-project
   source:
-    repoURL: https://github.com/your-username/your-repo.git
+    repoURL: https://github.com/valipashask26/argocd-learning-2.git
     targetRevision: master
     path: apps/child-app-4
   destination:
