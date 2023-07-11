@@ -3,14 +3,11 @@ kind: Application
 metadata:
   name: app-of-apps
 spec:
-  project: my-project
+  project: default
   source:
     repoURL: https://github.com/valipashask26/argocd-learning-2.git
     targetRevision: master
     path: apps
-    helm:
-      valueFiles:
-        - 'child-app-*.yaml'
   destination:
     server: https://kubernetes.default.svc
     namespace: abcd

@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: child-app-1
 spec:
-  project: my-project
+  project: default
   source:
     repoURL: https://github.com/valipashask26/argocd-learning-2.git
     targetRevision: master
