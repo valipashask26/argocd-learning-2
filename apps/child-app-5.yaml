@@ -18,9 +18,3 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-  approvals:
-    - name: manual-approval
-      provider:
-        name: manual
-        manual:
-          instructions: Please review and approve the deployment
